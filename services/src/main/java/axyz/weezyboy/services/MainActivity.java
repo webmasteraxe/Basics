@@ -28,20 +28,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // TODO Auto-generated method stub
         if (v == b1)
         {
-            imageView.setImageResource(R.drawable.hdpi);
+            imageView.setImageResource(R.drawable.rsz_isis_gaia);
+            startService(new Intent(getBaseContext(), MyService.class));
         } else if(v == b2){
-            imageView.setImageResource(R.drawable.hdpi1);
+            imageView.setImageResource(R.drawable.rsz_white_avatar);
+            stopService(new Intent(getBaseContext(), MyService.class));
         }
 
     }
 
-    // Method to start the service
+   /* // Method to start the service
     public void startService(View view) {
         startService(new Intent(getBaseContext(), MyService.class));
-    }
+    }*/
 
-    // Method to stop the service
+    /*// Method to stop the service
     public void stopService(View view) {
         stopService(new Intent(getBaseContext(), MyService.class));
-    }
+    }*/
 }
