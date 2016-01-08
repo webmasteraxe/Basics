@@ -1,4 +1,4 @@
-package axyz.weezyboy.services;
+package axyz.weezyboy.services.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import axyz.weezyboy.services.MyService;
+import axyz.weezyboy.services.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     ImageView imageView;
