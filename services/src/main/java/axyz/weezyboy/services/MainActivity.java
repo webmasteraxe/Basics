@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // TODO Auto-generated method stub
         if (v == b1)
         {
-            imageView.setImageResource(R.drawable.torch);
+            imageView.setImageResource(R.drawable.hdpi);
         } else if(v == b2){
-            imageView.setImageResource(R.drawable.off_torch);
+            imageView.setImageResource(R.drawable.hdpi1);
         }
 
     }
