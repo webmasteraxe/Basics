@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.hardware.Camera.Parameters;
@@ -11,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import axyz.weezyboy.services.MyService;
 import axyz.weezyboy.services.R;
 
 /**
@@ -50,11 +52,13 @@ public class TorchActivity extends Activity {
                 camera.setParameters(parameters);
                 camera.stopPreview();
                 isFlashLightOn = false;
+                stopService(new Intent(getBaseContext(), MyService.class));
             }else{
                 flashLightButton.setImageResource(R.drawable.on_torch);
                 parameters.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
                 camera.setParameters(parameters);
                 camera.startPreview();
+                startService(new Intent(getBaseContext(), MyService.class));
                 isFlashLightOn = true;
             }
 
